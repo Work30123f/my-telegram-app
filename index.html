@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Социальная сеть</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Навигация -->
+        <nav class="navbar">
+            <div class="nav-tabs">
+                <button class="tab active" data-tab="feed">Лента</button>
+                <button class="tab" data-tab="profile">Профиль</button>
+                <button class="tab" data-tab="messages">Сообщения</button>
+                <button class="tab" data-tab="notifications">Уведомления</button>
+            </div>
+        </nav>
+
+        <!-- Фильтры -->
+        <div class="filters" id="filters">
+            <button class="filter-btn active" data-filter="popular">Популярные</button>
+            <button class="filter-btn" data-filter="new">Новые</button>
+            <button class="filter-btn" data-filter="subscriptions">Подписки</button>
+        </div>
+
+        <!-- Контент -->
+        <main class="main-content">
+            <div id="feed" class="tab-content active">
+                <div id="posts-container" class="posts-container">
+                    <!-- Посты загружаются через JS -->
+                </div>
+            </div>
+
+            <div id="profile" class="tab-content">
+                <!-- Профиль -->
+            </div>
+
+            <div id="messages" class="tab-content">
+                <!-- Сообщения -->
+            </div>
+
+            <div id="notifications" class="tab-content">
+                <!-- Уведомления -->
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="components/feed.js"></script>
+    <script src="components/profile.js"></script>
+    <script src="components/comments.js"></script>
+    <script src="components/messages.js"></script>
+    <script src="data/mock-data.js"></script>
+</body>
+</html>
